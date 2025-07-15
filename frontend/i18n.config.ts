@@ -1,0 +1,57 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
+const datetimeFormats = {
+  // CODE_GEN_ID: DATE_LOCALES
+  "tr-TR": require("./lang/dateTimeFormats/tr-TR.json"),
+  "zh-CN": require("./lang/dateTimeFormats/zh-CN.json"),
+  "ja-JP": require("./lang/dateTimeFormats/ja-JP.json"),
+  "en-GB": require("./lang/dateTimeFormats/en-GB.json"),
+  "ca-ES": require("./lang/dateTimeFormats/ca-ES.json"),
+  "it-IT": require("./lang/dateTimeFormats/it-IT.json"),
+  "pl-PL": require("./lang/dateTimeFormats/pl-PL.json"),
+  "pt-PT": require("./lang/dateTimeFormats/pt-PT.json"),
+  "ro-RO": require("./lang/dateTimeFormats/ro-RO.json"),
+  "sr-SP": require("./lang/dateTimeFormats/sr-SP.json"),
+  "hr-HR": require("./lang/dateTimeFormats/hr-HR.json"),
+  "de-DE": require("./lang/dateTimeFormats/de-DE.json"),
+  "zh-TW": require("./lang/dateTimeFormats/zh-TW.json"),
+  "af-ZA": require("./lang/dateTimeFormats/af-ZA.json"),
+  "fr-CA": require("./lang/dateTimeFormats/fr-CA.json"),
+  "he-IL": require("./lang/dateTimeFormats/he-IL.json"),
+  "pt-BR": require("./lang/dateTimeFormats/pt-BR.json"),
+  "cs-CZ": require("./lang/dateTimeFormats/cs-CZ.json"),
+  "fr-FR": require("./lang/dateTimeFormats/fr-FR.json"),
+  "ru-RU": require("./lang/dateTimeFormats/ru-RU.json"),
+  "is-IS": require("./lang/dateTimeFormats/is-IS.json"),
+  "sk-SK": require("./lang/dateTimeFormats/sk-SK.json"),
+  "el-GR": require("./lang/dateTimeFormats/el-GR.json"),
+  "fr-BE": require("./lang/dateTimeFormats/fr-BE.json"),
+  "da-DK": require("./lang/dateTimeFormats/da-DK.json"),
+  "hu-HU": require("./lang/dateTimeFormats/hu-HU.json"),
+  "es-ES": require("./lang/dateTimeFormats/es-ES.json"),
+  "gl-ES": require("./lang/dateTimeFormats/gl-ES.json"),
+  "no-NO": require("./lang/dateTimeFormats/no-NO.json"),
+  "lt-LT": require("./lang/dateTimeFormats/lt-LT.json"),
+  "en-US": require("./lang/dateTimeFormats/en-US.json"),
+  "sv-SE": require("./lang/dateTimeFormats/sv-SE.json"),
+  "ko-KR": require("./lang/dateTimeFormats/ko-KR.json"),
+  "bg-BG": require("./lang/dateTimeFormats/bg-BG.json"),
+  "sl-SI": require("./lang/dateTimeFormats/sl-SI.json"),
+  "uk-UA": require("./lang/dateTimeFormats/uk-UA.json"),
+  "lv-LV": require("./lang/dateTimeFormats/lv-LV.json"),
+  "ar-SA": require("./lang/dateTimeFormats/ar-SA.json"),
+  "nl-NL": require("./lang/dateTimeFormats/nl-NL.json"),
+  "vi-VN": require("./lang/dateTimeFormats/vi-VN.json"),
+  "fi-FI": require("./lang/dateTimeFormats/fi-FI.json"),
+  // END: DATE_LOCALES
+};
+
+export default defineI18nConfig(() => {
+  return {
+    legacy: false,
+    locale: "en-US",
+    availableLocales: Object.keys(datetimeFormats),
+    datetimeFormats,
+    fallbackLocale: "en-US",
+    fallbackWarn: true,
+  };
+});
