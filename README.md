@@ -226,6 +226,19 @@ spec:
    Confirm with `yes` when prompted.
 
 ---
+## Challenges Faced During Deployment
+
+- **Local Deployment**: Configured Kubernetes resources (`deployment.yaml` and `service.yaml`) for Rancher Desktop and verified using `kubectl`.
+- **Azure AKS Setup**: Automated AKS cluster creation using Terraform and verified compatibility with free-tier VM size (`Standard_B2s`).
+- **Sensitive Files**: Excluded files like `main.tf`, `.tfstate`, and `kubeconfig.yaml` using `.gitignore`.
+- **Large Files**: Removed Terraform provider files exceeding GitHub's 100MB limit by adding `.terraform/` to `.gitignore` and cleaning Git history.
+- **Secret Scanning**: Addressed AWS access keys detected in test files by excluding `tests/data/html/` and cleaning Git history.
+- **Repository Cleanup**: Used `git filter-repo` to remove sensitive files and large files, then pushed the cleaned repository.
+
+## Lessons Learned
+- Review `.gitignore` entries carefully to exclude sensitive files.
+- Use `git filter-repo` for cleaning up repository history.
+- Monitor GitHub's secret scanning and file size limits to avoid push failures.
 
 ## **Conclusion**
 This project demonstrates the complete workflow for deploying a Kubernetes application locally and on the cloud. It provides hands-on experience with Rancher Desktop, Azure AKS, and Terraform, making it ideal for junior developers to learn Kubernetes and cloud infrastructure automation.
@@ -238,6 +251,8 @@ This project demonstrates the complete workflow for deploying a Kubernetes appli
 ![alt text](Cloudmeliedeploy.png)
 ![alt text](localhostmeliedeploy.png)
 ![alt text](RancherDesktoplaunch.png)
+
+
 
 
 <!-- CONTRIBUTING -->
